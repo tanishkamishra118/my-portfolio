@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Tanishaka Mishra</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            T<span>M</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="education.html">
+                Education
+            </a>
+
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <main>
+
+        <section class="contact-section">
+
+            <!-- Heading -->
+
+            <div class="section-heading">
+
+                <p>GET IN TOUCH</p>
+
+                <h1>
+                    Let's
+                    <span>Connect</span>
+                </h1>
+
+                <div class="heading-line"></div>
+
+                <p class="heading-description">
+                    Have an opportunity, project idea or
+                    simply want to connect? Feel free to
+                    reach out.
+                </p>
+
+            </div>
+
+
+            <!-- ================= CONTACT CONTAINER ================= -->
+
+            <div class="contact-container">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="contact-info">
+
+                    <p class="contact-label">
+                        CONTACT DETAILS
+                    </p>
+
+                    <h2>
+                        Let's build something
+                        <span>meaningful.</span>
+                    </h2>
+
+                    <p>
+                        I am interested in learning, collaborating
+                        and exploring opportunities in technology,
+                        Data Science and AI.
+                    </p>
+                    <br>
+
+
+                    <!-- Email -->
+                        <div>
+                            <span>
+                                Email
+                            </span>
+                            <a href="mailto:tanishkamishra118@gmail.com">tanishkamishra118@gmail.com</a>
+                        </div>
+                    
+                    <br>
+
+                    <!-- Location -->
+                        <div>
+                            <span>
+                                Based In
+                            </span>
+
+                            <p>
+                                India
+                            </p>
+
+                        </div>
+
+
+
+
+                    <!-- Social -->
+
+                    <div class="contact-social">
+
+                        <p>
+                            FIND ME ONLINE
+                        </p>
+
+                        <div>
+
+                            <a href="#" target="_blank">
+                                GitHub
+                            </a>
+                            <br>
+
+                            <a href="https://www.linkedin.com/in/tanishka-mishra-6960a6389" target="_blank">
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <br>
+
+
+                <!-- RIGHT SIDE FORM -->
+
+                <div class="contact-form-box">
+
+                    <form id="contactForm">
+
+                        <!-- Name -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Your Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+                        
+
+
+                        <!-- Subject -->
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What would you like to discuss?"
+                                required
+                            >
+                        
+                        </div>
+                        
+
+
+                        <!-- Message -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="btn primary-btn submit-btn"
+                        >
+                            Send Message →
+                        </button>
+
+                        <p
+                            id="formMessage"
+                            class="form-message"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Tanishaka Mishra
+        </p>
+
+        <p>
+            AI & Data Science Portfolio
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
