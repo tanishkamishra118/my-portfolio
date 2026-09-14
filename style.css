@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+/* =====================================================
+   TANISHAKA MISHRA - PORTFOLIO
+   CSS FILE - PART 1
+   ===================================================== */
+
+
+/* ================= GLOBAL ================= */
 
 * {
     margin: 0;
@@ -14,7 +20,8 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR */
+
+/* ================= NAVBAR ================= */
 
 .navbar {
     width: 100%;
@@ -30,10 +37,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
     z-index: 1000;
 
     border-bottom: 1px solid #ded2c2;
 }
+
+
+/* Logo */
 
 .logo {
     font-size: 25px;
@@ -45,25 +56,60 @@ body {
     color: #c65d3a;
 }
 
+
+/* Navigation */
+
 .navbar nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
 }
 
 .navbar nav a {
     color: #34554a;
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 600;
 
+    white-space: nowrap;
+
     transition: 0.3s;
 }
+
+
+/* Navigation Hover */
 
 .navbar nav a:hover {
     color: #c65d3a;
 }
 
-/* HERO */
+
+/* Active Page */
+
+.navbar nav a.active {
+    color: #c65d3a;
+}
+
+
+/* ================= MOBILE MENU BUTTON ================= */
+
+.menu-btn {
+    display: none;
+
+    background: none;
+    border: none;
+
+    font-size: 28px;
+
+    color: #18352d;
+
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
 
 .hero {
     min-height: 100vh;
@@ -71,6 +117,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 60px;
 
     padding: 130px 8% 70px;
 
@@ -80,24 +128,37 @@ body {
             rgba(198, 93, 58, 0.16),
             transparent 30%
         ),
+
         radial-gradient(
             circle at 15% 80%,
             rgba(24, 53, 45, 0.10),
             transparent 30%
         ),
+
         #f5efe6;
 }
+
+
+/* Hero Content */
 
 .hero-content {
     max-width: 650px;
 }
 
+
+/* Small Heading */
+
 .hero-content .small-heading {
     color: #c65d3a;
-    font-size: 18px;
+
+    font-size: 16px;
     font-weight: 700;
-    margin-bottom: 12px;
+
+    margin-bottom: 10px;
 }
+
+
+/* Main Heading */
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
@@ -108,12 +169,33 @@ body {
 
     color: #18352d;
 
-    margin-bottom: 22px;
+    margin-bottom: 15px;
 }
+
+
+/* Highlighted Name */
 
 .hero-content h1 span {
     color: #c65d3a;
 }
+
+
+/* Degree */
+
+.hero-content h2 {
+    font-size: 24px;
+
+    color: #34554a;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h2 span {
+    color: #c65d3a;
+}
+
+
+/* Description */
 
 .hero-content p {
     color: #587067;
@@ -122,9 +204,11 @@ body {
 
     max-width: 600px;
 
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
+
+/* ================= BUTTONS ================= */
 
 .btn {
     display: inline-block;
@@ -142,14 +226,20 @@ body {
     transition: 0.3s;
 }
 
+
+/* Primary Button */
+
 .btn-primary {
     background: #18352d;
 
-    color: #ffffff;
+    color: white;
 
     box-shadow:
         0 10px 25px rgba(24, 53, 45, 0.18);
 }
+
+
+/* Primary Button Hover */
 
 .btn-primary:hover {
     background: #c65d3a;
@@ -157,6 +247,10 @@ body {
     transform: translateY(-3px);
 }
 
+
+/* Secondary Button */
+
+.btn-secondary,
 .btn-outline {
     border: 1.5px solid #18352d;
 
@@ -165,20 +259,25 @@ body {
     background: transparent;
 }
 
+
+/* Secondary Button Hover */
+
+.btn-secondary:hover,
 .btn-outline:hover {
     background: #18352d;
 
     color: white;
 }
 
-/* SOCIAL LINKS */
+
+/* ================= SOCIAL LINKS ================= */
 
 .social-links {
     display: flex;
 
     gap: 20px;
 
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .social-links a {
@@ -198,6 +297,8 @@ body {
 }
 
 
+/* ================= HERO CARD ================= */
+
 .hero-card {
     width: 350px;
     height: 350px;
@@ -205,50 +306,142 @@ body {
     border-radius: 24px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     background: #18352d;
-    color:white;
+
+    color: white;
 
     padding: 8px;
 
     transform: rotate(2deg);
 
-    box-shadow:
-        20px 20px 0px #c65d3a;
+    box-shadow: 20px 20px 0px #c65d3a;
 
     transition: 0.4s;
+
+    flex-shrink: 0;
 }
+
+
+/* Hero Card Hover */
 
 .hero-card:hover {
     transform: rotate(0deg) translateY(-8px);
 }
 
-.hero-card img {
+
+/* Profile Box */
+
+.profile-box {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    display: flex;
 
-    border-radius: 18px;
+    flex-direction: column;
 
-    border: 4px solid #f5efe6;
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
 }
 
+
+/* Profile Icon */
+
+.profile-icon {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c65d3a;
+
+    color: white;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+/* Profile Heading */
+
+.profile-box h3 {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+.profile-box p {
+    color: #d6e0db;
+}
+
+
+/* ================= MINI STATS ================= */
+
+.mini-stats {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.mini-stats div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.mini-stats strong {
+    font-size: 15px;
+}
+
+.mini-stats span {
+    font-size: 12px;
+
+    color: #b9c8c1;
+}
+
+
+/* ================= SECTIONS ================= */
 
 section {
     padding: 100px 8%;
 }
 
-.section-title {
-    text-align: center;
 
-    margin-bottom: 50px;
+/* Section Heading */
+
+.section-heading {
+    margin-bottom: 45px;
 }
 
-.section-title h2 {
+.section-heading p {
+    color: #c65d3a;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2,
+.section-heading h1 {
     font-family: 'Playfair Display', serif;
 
     font-size: 42px;
@@ -258,21 +451,68 @@ section {
     margin-bottom: 10px;
 }
 
-.section-title span {
+.section-heading h2 span,
+.section-heading h1 span {
     color: #c65d3a;
 }
 
-.section-title p {
+.section-description {
     color: #6b8179;
 }
 
-/* EDUCATION */
 
-.education-container {
-    max-width: 900px;
+/* ================= INTRO CARDS ================= */
 
-    margin: auto;
+.intro-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
 }
+
+.intro-card {
+    background: #fffaf3;
+
+    border: 1px solid #ded2c2;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #c65d3a;
+
+    box-shadow:
+        0 15px 35px rgba(24, 53, 45, 0.10);
+}
+
+.card-number {
+    color: #c65d3a;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.intro-card h3 {
+    color: #18352d;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.intro-card p {
+    color: #667b73;
+}
+/* ================= EDUCATION ================= */
 
 .education-card {
     background: #fffaf3;
@@ -297,6 +537,7 @@ section {
         0 15px 35px rgba(24, 53, 45, 0.10);
 }
 
+.education-card h2,
 .education-card h3 {
     color: #18352d;
 
@@ -304,8 +545,47 @@ section {
 }
 
 .education-card p {
-    color: #60766e;
+    color: #667b73;
 }
+
+.education-year {
+    color: #c65d3a;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.education-description {
+    margin-top: 12px;
+}
+
+.education-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.education-tags span {
+    background: #e9dfd2;
+
+    color: #34554a;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* ================= SKILLS ================= */
 
 .skills-container {
     display: grid;
@@ -353,6 +633,8 @@ section {
 }
 
 
+/* ================= PROJECTS ================= */
+
 .projects-container {
     display: grid;
 
@@ -383,27 +665,132 @@ section {
         0 20px 40px rgba(24, 53, 45, 0.12);
 }
 
+.project-number {
+    color: #c65d3a;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.project-type {
+    color: #c65d3a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.project-card h2,
 .project-card h3 {
     color: #18352d;
 
     margin-bottom: 12px;
 }
 
+.project-description,
 .project-card p {
     color: #667b73;
-
-    margin-bottom: 20px;
 }
 
-.project-card a {
-    color: #c65d3a;
+
+/* Technologies */
+
+.technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.technologies span {
+    background: #e9dfd2;
+
+    color: #34554a;
+
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* Project Features */
+
+.project-features {
+    margin-top: 20px;
+}
+
+.project-features ul {
+    padding-left: 20px;
+
+    color: #667b73;
+}
+
+
+/* Project Buttons */
+
+.project-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.project-btn,
+.github-btn {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
 
     text-decoration: none;
 
     font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.project-btn {
+    background: #18352d;
+
+    color: white;
+}
+
+.project-btn:hover {
+    background: #c65d3a;
+
+    transform: translateY(-2px);
+}
+
+.github-btn {
+    border: 1px solid #18352d;
+
+    color: #18352d;
+}
+
+.github-btn:hover {
+    background: #18352d;
+
+    color: white;
 }
 
 
+/* ================= CONTACT ================= */
 
 .contact {
     text-align: center;
@@ -428,6 +815,56 @@ section {
 }
 
 
+/* Contact Form */
+
+.contact-form-box {
+    max-width: 700px;
+
+    margin: 30px auto 0;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ded2c2;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+    border-color: #c65d3a;
+}
+
+.submit-btn {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* Form Message */
+
+.form-message {
+    margin-top: 15px;
+
+    color: #f0a889 !important;
+
+    font-weight: 600;
+}
+
+
+/* ================= FOOTER ================= */
+
 footer {
     padding: 25px 8%;
 
@@ -438,8 +875,121 @@ footer {
     color: #b9c8c1;
 }
 
+footer span {
+    color: #c65d3a;
+}
+
+
+/* ================= EDUCATION TIMELINE ================= */
+
+.education-timeline {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.education-item {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+.timeline-dot {
+    color: #c65d3a;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    padding-top: 20px;
+}
+
+
+/* ================= LEARNING FOCUS ================= */
+
+.learning-focus {
+    margin-top: 45px;
+
+    padding: 30px;
+
+    background: #18352d;
+
+    border-radius: 16px;
+
+    color: white;
+}
+
+.learning-focus h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 32px;
+
+    margin: 8px 0 12px;
+}
+
+.learning-focus h2 span {
+    color: #f0a889;
+}
+
+.learning-focus p {
+    color: #d6e0db;
+}
+
+.focus-label {
+    color: #f0a889 !important;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================= SCROLL REVEAL ================= */
+
+/*
+   Cards are visible by default.
+   JavaScript can add .reveal for animation.
+*/
+
+.intro-card,
+.education-item,
+.education-card,
+.skill-card,
+.project-card,
+.contact-form-box {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition: 0.6s ease;
+}
+
+.reveal {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
 
     .hero {
         flex-direction: column-reverse;
@@ -457,7 +1007,6 @@ footer {
 
     .hero-content p {
         margin-left: auto;
-
         margin-right: auto;
     }
 
@@ -465,30 +1014,77 @@ footer {
         justify-content: center;
     }
 
-    .hero-image {
+    .hero-card {
         width: 280px;
-
         height: 280px;
     }
 }
 
+
+/* ================= MOBILE ================= */
+
 @media (max-width: 650px) {
+
+    /* Navbar */
 
     .navbar {
         padding: 18px 5%;
     }
 
-    .navbar nav {
-        gap: 12px;
+
+    /* Menu Button */
+
+    .menu-btn {
+        display: block;
     }
 
-    .navbar nav a {
-        font-size: 12px;
+
+    /* Navigation Hidden Initially */
+
+    .navbar nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #f5efe6;
+
+        padding: 15px 6%;
+
+        border-bottom: 1px solid #ded2c2;
     }
+
+
+    /* Navigation Visible After JS */
+
+    .navbar nav.show {
+        display: flex;
+    }
+
+
+    .navbar nav a {
+        font-size: 14px;
+
+        padding: 12px 0;
+    }
+
+
+    /* Sections */
 
     section {
         padding: 75px 6%;
     }
+
+
+    /* Hero */
 
     .hero {
         padding-left: 6%;
@@ -496,15 +1092,73 @@ footer {
         padding-right: 6%;
     }
 
+
     .hero-content h1 {
         font-size: 48px;
     }
+
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
 
     .hero-content p {
         font-size: 15px;
     }
 
+
+    /* Buttons */
+
     .btn {
         margin-bottom: 12px;
+    }
+
+
+    /* Hero Card */
+
+    .hero-card {
+        width: 260px;
+
+        height: 260px;
+
+        box-shadow: 14px 14px 0px #c65d3a;
+    }
+
+
+    /* Section Heading */
+
+    .section-heading h2,
+    .section-heading h1 {
+        font-size: 34px;
+    }
+
+
+    /* Education */
+
+    .education-item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-dot {
+        padding-top: 0;
+    }
+
+
+    /* Learning Focus */
+
+    .learning-focus {
+        padding: 22px;
+    }
+
+    .learning-focus h2 {
+        font-size: 26px;
+    }
+
+
+    /* Mini Stats */
+
+    .mini-stats {
+        gap: 10px;
     }
 }
